@@ -1,0 +1,285 @@
+
+.feature-img {
+    transition: transform 0.3s ease;
+}
+
+.feature-img:hover {
+    transform: scale(1.05);
+}
+
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-In Effect for Page */
+.signin-page {
+    animation: fadeInBackground 1s ease-in-out;
+}
+
+/* Background Fade-In Animation */
+@keyframes fadeInBackground {
+    0% { opacity: 0; background-position: right; }
+    100% { opacity: 1; background-position: left; }
+}
+
+/* Card Slide-Up with Slight Bounce Effect */
+.card {
+    animation: bounceUp 1.2s ease-in-out;
+    transform-origin: bottom;
+}
+
+@keyframes bounceUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    60% { transform: translateY(-10px); opacity: 1; }
+    100% { transform: translateY(0); }
+}
+
+/* Input Fields: Focus and Pulse Animation */
+.form-control {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 12px rgba(108, 99, 255, 0.6);
+    border-color: #6C63FF;
+   
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 12px rgba(108, 99, 255, 0.6); }
+    100% { box-shadow: 0 0 16px rgba(108, 99, 255, 0.8); }
+}
+
+/* Button Hover Animation with Scale Effect */
+.btn-primary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0px 6px 18px rgba(60, 63, 220, 0.3);
+}
+
+/* Link Hover with Delayed Underline */
+.text-decoration-none {
+    position: relative;
+    color: #6C63FF;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.text-decoration-none:hover {
+    color: #433D8B;
+    transform: scale(1.05);
+}
+
+.text-decoration-none::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #433D8B;
+    transition: width 0.3s ease 0.1s;
+}
+
+.text-decoration-none:hover::after {
+    width: 100%;
+}
+
+/* Smooth Fade-In Delay for Form Elements */
+.form-control, .btn-primary, .text-center {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.form-control:nth-child(1) { animation-delay: 0.3s; }
+.form-control:nth-child(2) { animation-delay: 0.5s; }
+.btn-primary { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Card Shadow Pulse Animation */
+.card {
+    position: relative;
+    overflow: hidden;
+    animation: shadowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes shadowPulse {
+    0% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
+    100% { box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); }
+}
+
+/* Card Glow Border on Hover */
+.card:hover::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 10px;
+    border: 3px solid rgba(108, 99, 255, 0.5);
+    animation: glowBorder 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowBorder {
+    0% { opacity: 0.3; box-shadow: 0 0 15px rgba(108, 99, 255, 0.3); }
+    100% { opacity: 0.8; box-shadow: 0 0 30px rgba(108, 99, 255, 0.6); }
+}
+
+/* Card Pop-Out Scale on Hover */
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 12px 25px rgba(60, 63, 220, 0.3);
+}
+
+/* Animated Gradient Background on Hover */
+.card:hover .card-body {
+    background: linear-gradient(135deg, #E3A5C7, #433D8B);
+    background-size: 200% 200%;
+    animation: gradientBackground 3s ease infinite;
+    color: white;
+}
+
+@keyframes gradientBackground {
+    0% { background-position: left top; }
+    50% { background-position: right center; }
+    100% { background-position: left bottom; }
+}
+
+/* Icon Bounce Animation */
+.feature-icon {
+    animation: iconBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+/* Section Fade-in Zoom Animation */
+.faq-section {
+    animation: fadeInZoom 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInZoom {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Card Hover Effect - Lift and Shadow */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(101, 61, 139, 0.2);
+}
+
+/* FAQ Question Hover Underline Animation */
+.faq-question {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+    color: #433D8B;
+}
+
+.faq-question::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #6C63FF;
+    transition: width 0.3s ease;
+}
+
+.faq-question:hover::after {
+    width: 100%;
+}
+
+/* FAQ Answer Text Fade In */
+.faq-answer {
+    opacity: 0;
+    animation: fadeInText 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Section Fade-in Zoom Animation */
+.benefits-section {
+    animation: fadeInZoom 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInZoom {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Card Hover Effect - Lift and Shadow */
+.benefits-section .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefits-section .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(67, 61, 139, 0.2);
+}
+
+/* Text Hover Underline Animation */
+.benefits-section .font-weight-bold {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.benefits-section .font-weight-bold:hover {
+    color: #4e3d8b;
+}
+
+.benefits-section .font-weight-bold::after {
+    content: ""; 
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #6C63FF;
+    transition: width 0.3s ease;
+}
+
+.benefits-section .font-weight-bold:hover::after {
+    width: 100%;
+}
+
+/* Image Fade-in and Zoom Effect */
+.benefits-section .hero-image img {
+    animation: fadeInZoomImage 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInZoomImage {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+

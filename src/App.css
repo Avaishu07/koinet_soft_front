@@ -1,0 +1,107 @@
+
+/* Container Animation - Subtle Zoom and Fade In */
+.signup-page {
+    animation: fadeInZoom 1s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInZoom {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Card Hover Shadow and Scale */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.4);
+}
+.card-control:focus {
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+    border-color: #6C63FF;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ff63ea 0%, #884dff 100%);
+    box-shadow: 0 0 10px rgba(224, 99, 255, 0.3);
+}
+
+/* Button Gradient Hover Effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, #433D8B, #E3A5C7);
+    transition: transform 0.4s ease;
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.btn-primary:hover::before {
+    transform: translateX(0);
+}
+
+.btn-primary:hover {
+    color: white;
+    background: none;
+}
+
+/* Input Fields Border Glow on Focus */
+.form-control {
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+    border-color: #6C63FF;
+}
+
+/* Placeholder Color Animation */
+.form-control::placeholder {
+    color: #aaa;
+    transition: color 0.4s ease;
+}
+
+.form-control:focus::placeholder {
+    color: #6C63FF;
+}
+
+/* Link Hover Underline Animation */
+.text-decoration-none {
+    position: relative;
+    color: #433D8B;
+    transition: color 0.3s ease;
+}
+
+.text-decoration-none:hover {
+    color: #6C63FF;
+}
+
+.text-decoration-none::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    width: 100%;
+    background-color: #6C63FF;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.text-decoration-none:hover::after {
+    transform: scaleX(1);
+}
+
