@@ -61,6 +61,7 @@ const FeaturesSection = () => {
                         </div>
                     </div>
 
+
                     <div className="col-md-6 d-flex flex-column justify-content-center">
                         <div className="col-md-12 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
                             <div className="card shadow-lg border-light h-100 feature-card">
@@ -166,7 +167,6 @@ const ServicesSection = () => {
                 <h2 className="mb-5 animate__animated animate__fadeIn">Our Services</h2>
                 <div className="row">
 
-                    {/* Left Side: Image */}
                     <div className="col-md-6 d-flex justify-content-center align-items-center animate__animated animate__fadeIn animate__delay-0.5s">
                         <div className="services-image">
                             <img
@@ -247,7 +247,7 @@ const FAQSection = () => {
                 <h2 className="mb-5 animate__animated animate__fadeIn text-center">Frequently Asked Questions</h2>
                 
                 <div className="row">
-                    {/* FAQ Item 1 */}
+                 
                     <div className="col-md-6 mb-4 animate__animated animate__fadeIn animate__delay-0.5s">
                         <div className="card shadow-lg border-0">
                             <div className="card-body p-4">
@@ -267,7 +267,7 @@ const FAQSection = () => {
                         </div>
                     </div>
 
-                    {/* FAQ Item 3 */}
+                  
                     <div className="col-md-6 mb-4 animate__animated animate__fadeIn animate__delay-0.9s">
                         <div className="card shadow-lg border-0">
                             <div className="card-body p-4">
@@ -277,7 +277,7 @@ const FAQSection = () => {
                         </div>
                     </div>
 
-                    {/* FAQ Item 4 - New Question */}
+                    
                     <div className="col-md-6 mb-4 animate__animated animate__fadeIn animate__delay-1.1s">
                         <div className="card shadow-lg border-0">
                             <div className="card-body p-4">

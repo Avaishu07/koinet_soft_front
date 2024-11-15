@@ -33,6 +33,7 @@ const Signin = () => {
         </div>
         
     );
+    
 };
-<Footer/>
+
 export default Signin;
